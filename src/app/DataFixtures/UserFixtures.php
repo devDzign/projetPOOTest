@@ -9,7 +9,7 @@
 namespace app\DataFixtures;
 
 
-class UserFixtures {
+class UserFixtures extends BaseFixtures {
 
     public function getType()
     {

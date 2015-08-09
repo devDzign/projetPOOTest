@@ -7,27 +7,15 @@
  */
 
 require_once __DIR__."/../../../core/bootstrap..php";
-use \RedBeanPHP\Facade as R;
 
 
-$itemFixtures =  new \app\DataFixtures\ItemFixtures();
+$className = $argv[1];
+$classFixtures = sprintf("\app\DataFixtures\%sFixtures",ucfirst($className));
+$objetFixtures =  new $classFixtures();
 
-$type = $itemFixtures->getType();
-$Fixtures = $itemFixtures->getFixtures();
+$objetFixtures->laodFixtures();
 
-foreach($Fixtures as $fixture)
-{
-    $item = R::dispense($type);
-    /**
-     * hydrater l'objet Item
-     */
-    foreach($fixture as $property => $value)
-    {
-        $item->$property = $value;
-    }
-    /**
-     * Persister en BD
-     */
-    R::store($item);
-}
+
+
+
 
