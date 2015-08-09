@@ -13,9 +13,9 @@
 
 define('DB_TYPE','mysql');
 define('DB_HOST','localhost');
-define('DB_NAME','appDB');
+define('DB_NAME','appdb');
 define('DB_USER','root');
-define('DB_PASSWORD','');
+define('DB_PASSWORD',null);
 
 /**
  * RedBean Configuration
