@@ -1,0 +1,13 @@
+{
+    "name": "app",
+    "license": "MIT",
+    "type": "project",
+    "description": "The tool manager items",
+    "autoload": {
+        "psr-0": { "": "src/" }
+    },
+    "require": {
+         "gabordemooij/redbean": "dev-master"
+    }
+
+}
